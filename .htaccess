@@ -1,0 +1,20 @@
+Options +FollowSymLinks
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^www\.zulfumehmet\.tk$
+RewriteCond %{SERVER_PORT} !=443
+RewriteRule ^ https://zulfumehmet.tk%{REQUEST_URI} [NS,R,L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^altin.html? altin.php [NC,L]
+RewriteRule ^doviz.html? doviz.php [NC,L]
+RewriteRule detayaltin-(.*).html altind.php?altin=$1
+RewriteRule detaydoviz-(.*).html dovizd.php?doviz=$1
+RewriteRule detaydoviz-(.*).html haberd.php?doviz=$1
+RewriteRule ^haber-(.*)-(.*).html$ haberd.php?seo=$1&id=$2 [L,NC]
+RewriteRule ^haberler.html? haberler.php [NC,L]
+RewriteRule haberler-(.*).html haberler.php?s=$1
