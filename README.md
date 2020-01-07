@@ -1,2 +1,3 @@
 # GuncelDovizV2
 Güncel Döviz Scripti V1 Geliştirlmiş Halidir.
+Kurulum hakkında  https://www.zulfumehmet.com/guncel-doviz-scripti-v-2-0/ adresini ziyaret edebilirsiniz...
